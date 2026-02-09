@@ -92,7 +92,7 @@ class SentryDataCompiler:
                         self.tokens.append(Token("STRING", value, self.current_line, start_col))
                     else:
                         self.errors.append(
-                            CompilerError(self.current_line, "LÉXICO", "String sin cerrar")
+                            CompilerError(self.current_line, "LÉXICO", "Error 002: String sin cerrar")
                         )
                     continue
 
@@ -142,14 +142,14 @@ class SentryDataCompiler:
 
                 # CARÁCTER NO RECONOCIDO
                 self.errors.append(
-                    CompilerError(self.current_line, "LÉXICO", f"Carácter no reconocido: '{ch}'")
+                    CompilerError(self.current_line, "LÉXICO", f"Error 001: Carácter no reconocido: '{ch}'")
                 )
                 i += 1
                 column += 1
 
         return self.tokens
 
-    # MÁQUINA VIRTUAL DE PILA
+    # MÁQUINA VIRTUAL DE PILA (Forth)
     def execute_stack_machine(self, tokens: List[Token]) -> List[Dict]:
         """Ejecuta tokens en máquina de pila."""
         self.stack = []
@@ -249,7 +249,7 @@ class SentryDataCompiler:
     def get_stack(self) -> List[Any]:
         return self.stack
 
-# ========== INTERFAZ DE USUARIO (REPL) ==========
+# ========== INTERFAZ DE USUARIO ==========
 
 def main():
     print("=" * 60)
