@@ -19,3 +19,24 @@ Combinado AND+OR: -------------------
 Resultado paso a paso:
 1 0 AND → False
 False 1 OR → True
+
+
+Coparadores ----------------
+
+25 18 >
+RESULTADO: True
+
+precio 10 100 >= 5 <= AND
+Resultado: True
+
+edad 17 18 >=
+Resultado: False
+
+| Comparador | Sintaxis RPN | Ejemplo      | Resultado |
+| ---------- | ------------ | ------------ | --------- |
+| ==         | a b ==       | 123 123 ==   | True      |
+| !=         | a b !=       | "test" "" != | True      |
+| <          | a b <        | 10 20 <      | True      |
+| >          | a b >        | 25 18 >      | True      |
+| <=         | a b <=       | 100 100 <=   | True      |
+| >=         | a b >=       | 50 40 >=     | True      |
