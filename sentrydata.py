@@ -1,7 +1,5 @@
-# sentrydata.py - Compilador SentryData v0.3
-# Máquina Virtual de Pila para Automatización de Reglas de Limpieza de Datos
-# Autor: Tu nombre
-# Fecha: 2026
+#  Compilador SentryData 
+
 
 from dataclasses import dataclass
 from typing import List, Any, Dict
@@ -31,7 +29,7 @@ class CompilerError:
     type: str  # 'LÉXICO', 'SINTÁCTICO', 'SEMÁNTICO', 'EJECUCIÓN'
     description: str
 
-# ========== COMPILADOR PRINCIPAL ==========
+# ========== COMPILADOR ==========
 
 class SentryDataCompiler:
     def __init__(self) -> None:
@@ -151,7 +149,7 @@ class SentryDataCompiler:
 
         return self.tokens
 
-    # FASE 2: MÁQUINA VIRTUAL DE PILA
+    # MÁQUINA VIRTUAL DE PILA
     def execute_stack_machine(self, tokens: List[Token]) -> List[Dict]:
         """Ejecuta tokens en máquina de pila."""
         self.stack = []
@@ -255,7 +253,7 @@ class SentryDataCompiler:
 
 def main():
     print("=" * 60)
-    print("🛡️ SENTRYDATA COMPILADOR v0.3")
+    print("SENTRYDATA COMPILADOR")
     print("Compilador de Arquitectura de Pila para Limpieza de Datos")
     print("Notación Polaca Inversa (RPN) tipo Forth")
     print("=" * 60)
@@ -271,7 +269,7 @@ def main():
         try:
             src = input("\nSentryData> ")
             if src.strip().lower() in ("salir", "exit", "quit"):
-                print("¡Hasta luego!")
+                print("¡Gracias por probarlo!")
                 break
 
             if not src.strip():
@@ -279,14 +277,14 @@ def main():
 
             compiler = SentryDataCompiler()
 
-            # FASE 1: LÉXICO
+            # LÉXICO
             tokens = compiler.lexical_analysis(src)
 
             print("\n" + "="*40)
-            print("📋 FASE 1: ANÁLISIS LÉXICO")
+            print("ANÁLISIS LÉXICO")
             print("="*40)
             if not tokens:
-                print("❌ Ningún token generado")
+                print("Ningún token generado")
             else:
                 for i, t in enumerate(tokens, start=1):
                     print(f"{i:02d}. {t.type:<12} '{t.value}'  L{t.line}:C{t.column}")
@@ -295,10 +293,10 @@ def main():
             exec_log = compiler.execute_stack_machine(tokens)
 
             print("\n" + "="*40)
-            print("⚙️  FASE 2: MÁQUINA VIRTUAL DE PILA")
+            print("MÁQUINA VIRTUAL DE PILA")
             print("="*40)
             if not exec_log:
-                print("❌ No se ejecutó nada")
+                print("No se ejecutó nada")
             else:
                 for entry in exec_log:
                     step = entry["step"]
@@ -308,13 +306,13 @@ def main():
 
             # RESULTADO FINAL
             print("\n" + "="*40)
-            print("✅ RESULTADO FINAL")
+            print("RESULTADO FINAL")
             print("="*40)
             stack = compiler.get_stack()
             if stack:
                 print(f"Pila: {stack}")
                 if len(stack) == 1:
-                    print(f"📊 RESULTADO: {stack[0]}")
+                    print(f"RESULTADO: {stack[0]}")
             else:
                 print("Pila vacía")
 
@@ -324,13 +322,13 @@ def main():
             print("="*40)
             errors = compiler.get_errors()
             if not errors:
-                print("✅ Sin errores")
+                print("Sin errores")
             else:
                 for e in errors:
                     print(f"❌ L{e.line:2d} [{e.type:<10}] {e.description}")
 
         except KeyboardInterrupt:
-            print("\n\n¡Hasta luego!")
+            print("\n\n¡Gracias por probarme!")
             break
         except Exception as e:
             print(f"\n❌ Error inesperado: {e}")

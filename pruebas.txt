@@ -1,0 +1,21 @@
+Prueba AND ----------------
+
+1 0 AND
+Resultado: False 
+
+Prueba OR -------------------
+
+0 0 OR
+Resultado: True
+
+Prueba NOT -------------------
+
+True NOT
+Resuladado: False 
+
+Combinado AND+OR: -------------------
+
+1 0 AND 1 OR
+Resultado paso a paso:
+1 0 AND → False
+False 1 OR → True
