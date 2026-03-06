@@ -1,0 +1,18 @@
+Las nuevas palabras reservadas implementadas son:
+
+LOAD: Carga archivo CSV en memoria
+
+SAVE: Guarda datos procesados en CSV
+
+FILTER: Filtra registros (campo operador valor)
+
+DELETE: Elimina registros con campo específico
+
+MODIFY: Modifica valores (campo operador nuevo_valor)
+
+EXTRACT: Extrae valores de un campo
+
+COUNT: Cuenta registros cargados
+
+SHOW: Muestra primeros 5 registros
+
