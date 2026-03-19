@@ -1,0 +1,39 @@
+| Código | Fase       | Tipo       | Descripción                                                              |
+| ------ | ---------- | ---------- | ------------------------------------------------------------------------ |
+| 001    | Léxico     | LÉXICO     | Carácter no reconocido: '{carácter}'                                     |
+| 002    | Léxico     | LÉXICO     | String sin cerrar                                                        |
+| 101    | Sintáctico | SINTÁCTICO | Operador '{operador}' requiere 2 operandos en notación postfija          |
+| 102    | Sintáctico | SINTÁCTICO | Operador lógico '{AND/OR}' requiere 2 operandos                          |
+| 103    | Sintáctico | SINTÁCTICO | Operador lógico 'NOT' requiere 1 operando                                |
+| 104    | Sintáctico | SINTÁCTICO | La operación DUP requiere al menos 1 elemento en la pila                 |
+| 105    | Sintáctico | SINTÁCTICO | La operación {DROP/PRINT} requiere al menos 1 elemento en la pila        |
+| 106    | Sintáctico | SINTÁCTICO | La operación SWAP requiere al menos 2 elementos en la pila               |
+| 107    | Sintáctico | SINTÁCTICO | IF requiere una condición en la pila                                     |
+| 108    | Sintáctico | SINTÁCTICO | THEN sin IF correspondiente                                              |
+| 109    | Sintáctico | SINTÁCTICO | THEN duplicado en el mismo bloque IF                                     |
+| 110    | Sintáctico | SINTÁCTICO | ELSE sin IF correspondiente                                              |
+| 111    | Sintáctico | SINTÁCTICO | ELSE sin THEN previo en el mismo IF                                      |
+| 112    | Sintáctico | SINTÁCTICO | ELSE duplicado en el mismo bloque IF                                     |
+| 113    | Sintáctico | SINTÁCTICO | ENDIF sin IF correspondiente                                             |
+| 114    | Sintáctico | SINTÁCTICO | Bloque IF sin THEN                                                       |
+| 115    | Sintáctico | SINTÁCTICO | La instrucción {DELETE/EXTRACT} requiere al menos 1 parámetro en la pila |
+| 116    | Sintáctico | SINTÁCTICO | Token inesperado de tipo '{tipo}'                                        |
+| 117    | Sintáctico | SINTÁCTICO | Bloque IF sin ENDIF de cierre                                            |
+| 118    | Sintáctico | SINTÁCTICO | Expresión vacía                                                          |
+| 119    | Sintáctico | SINTÁCTICO | MODIFY requiere 3 parámetros (campo, operador, valor)                    |
+| 120    | Sintáctico | SINTÁCTICO | FILTER requiere 3 parámetros (campo, operador, valor)                    |
+| 121    | Sintáctico | SINTÁCTICO | {LOAD/SAVE} requiere 1 parámetro (nombre de archivo)                     |
+| —      | Ejecución  | EJECUCIÓN  | Stack underflow: {operador} requiere 2 operandos                         |
+| —      | Ejecución  | EJECUCIÓN  | LOAD requiere nombre de archivo                                          |
+| —      | Ejecución  | EJECUCIÓN  | Archivo no encontrado: {archivo}                                         |
+| —      | Ejecución  | EJECUCIÓN  | Error al leer CSV: {detalle}                                             |
+| —      | Ejecución  | EJECUCIÓN  | SAVE requiere nombre de archivo                                          |
+| —      | Ejecución  | EJECUCIÓN  | No hay datos cargados para guardar                                       |
+| —      | Ejecución  | EJECUCIÓN  | Error al guardar CSV: {detalle}                                          |
+| —      | Ejecución  | EJECUCIÓN  | FILTER requiere 3 parámetros                                             |
+| —      | Ejecución  | EJECUCIÓN  | No hay datos cargados para filtrar                                       |
+| —      | Ejecución  | EJECUCIÓN  | Operador desconocido: {operador}                                         |
+| —      | Ejecución  | EJECUCIÓN  | DELETE requiere nombre de campo                                          |
+| —      | Ejecución  | EJECUCIÓN  | No hay datos cargados                                                    |
+| —      | Ejecución  | EJECUCIÓN  | MODIFY requiere 3 parámetros                                             |
+| —      | Ejecución  | EJECUCIÓN  | EXTRACT requiere nombre de campo                                         |

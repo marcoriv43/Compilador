@@ -1,0 +1,44 @@
+Palabras Reservadas (Keywords)
+| Símbolo | Categoría         | Descripción                          |
+| ------- | ----------------- | ------------------------------------ |
+| AND     | KEYWORD - LÓGICO  | Operador lógico conjunción binaria   |
+| OR      | KEYWORD - LÓGICO  | Operador lógico disyunción binaria   |
+| NOT     | KEYWORD - LÓGICO  | Operador lógico negación unaria      |
+| IF      | KEYWORD - CONTROL | Inicio de bloque condicional         |
+| THEN    | KEYWORD - CONTROL | Cuerpo del bloque condicional        |
+| ELSE    | KEYWORD - CONTROL | Alternativa del bloque condicional   |
+| ENDIF   | KEYWORD - CONTROL | Cierre del bloque condicional        |
+| DUP     | KEYWORD - PILA    | Duplica el tope de la pila           |
+| DROP    | KEYWORD - PILA    | Descarta el tope de la pila          |
+| SWAP    | KEYWORD - PILA    | Intercambia los dos topes de la pila |
+| PRINT   | KEYWORD - PILA    | Imprime el tope de la pila           |
+| LOAD    | KEYWORD - DATOS   | Carga un archivo CSV en memoria      |
+| SAVE    | KEYWORD - DATOS   | Guarda datos en un archivo CSV       |
+| FILTER  | KEYWORD - DATOS   | Filtra registros por condición       |
+| DELETE  | KEYWORD - DATOS   | Elimina registros por campo          |
+| MODIFY  | KEYWORD - DATOS   | Modifica valores de un campo         |
+| EXTRACT | KEYWORD - DATOS   | Extrae valores de un campo           |
+| COUNT   | KEYWORD - DATOS   | Cuenta registros en memoria          |
+| SHOW    | KEYWORD - DATOS   | Muestra los primeros 5 registros     |
+
+
+Operadores
+| Símbolo | Token  | Categoría   | Aridad  |
+| ------- | ------ | ----------- | ------- |
+| +       | OP_ADD | ARITMÉTICO  | Binario |
+| -       | OP_SUB | ARITMÉTICO  | Binario |
+| *       | OP_MUL | ARITMÉTICO  | Binario |
+| /       | OP_DIV | ARITMÉTICO  | Binario |
+| ==      | OP_EQ  | COMPARACIÓN | Binario |
+| !=      | OP_NEQ | COMPARACIÓN | Binario |
+| <       | OP_LT  | COMPARACIÓN | Binario |
+| >       | OP_GT  | COMPARACIÓN | Binario |
+| <=      | OP_LTE | COMPARACIÓN | Binario |
+| >=      | OP_GTE | COMPARACIÓN | Binario |
+
+Tipos de Datos
+| Tipo                    | Token      | Descripción             |
+| ----------------------- | ---------- | ----------------------- |
+| Número entero o decimal | NUMBER     | Ej: 3, 4.5, 100         |
+| Cadena de texto         | STRING     | Ej: "Juan", "datos.csv" |
+| Identificador           | IDENTIFIER | Ej: edad, ciudad        |
